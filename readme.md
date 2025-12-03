@@ -1,1 +1,5 @@
-Gruppe Prosjekt #4 for MOD300-1 25H Anvendt Python programmering og modellering av Emad Omar Mohamed, Hassan Nehad Adnan, Sture Odin Domingos Troli,
+MOD300-1 25H Anvendt Python programmering og modellering
+
+Gruppe Prosjekt #4
+
+Medlemer : Emad Omar Mohamed, Hassan Nehad Adnan, Sture Odin Domingos Troli,
