@@ -8,6 +8,8 @@ This module has in it all the functions for:
 - Encoding pixel data into categories
 - Clustering using K-Means and K-NN
 - Visualizing cluster results
+
+
 """
 
 import numpy as np
