@@ -7,7 +7,7 @@ some of the functions were giving an error when imported so we had to rewrite th
 
 This module contains all functions for:
 - Loading and preprocessing Ebola data
-- SEIR model implementation (from Project 2)
+- SEIR model implementation (from Project 2 -  Task 5)
 - Linear regression
 - Polynomial/better fitting functions
 - Neural Network models
@@ -27,13 +27,13 @@ from sklearn.model_selection import train_test_split
 import warnings
 warnings.filterwarnings('ignore')
 
-# ============================================================================
+# ############################################################################
 # DATA LOADING FUNCTIONS
-# ============================================================================
+# ############################################################################
 
 def load_ebola_data(filepath):
     """
-    Load Ebola data from a .dat file.
+    Load Ebola data from a .dat files (ebola_cases_guinea.dat, ebola_cases_liberia.dat , and ebola_cases_sierra_leone.dat).
     
     Parameters:
     -----------
@@ -89,9 +89,9 @@ def load_all_countries(base_path):
     return data
 
 
-# ============================================================================
+# ############################################################################
 # SEIR MODEL (FROM PROJECT 2 - Exercise 5)
-# ============================================================================
+# ############################################################################
 
 def seir_model(t, y, beta0, lambda_param, sigma, gamma, N):
     """
@@ -193,9 +193,9 @@ def fit_seir_to_data(days, cumulative_cases, sigma, gamma, N,
         return None, None, None
 
 
-# ============================================================================
+# ############################################################################
 # TASK 0: Reproduce Exercise 5 plots
-# ============================================================================
+# ############################################################################
 
 def plot_exercise5_style(days, new_cases, cumulative_cases, country_name, 
                          model_cumulative=None, ax=None):
@@ -241,9 +241,9 @@ def plot_exercise5_style(days, new_cases, cumulative_cases, country_name,
     return fig, ax1, ax2
 
 
-# ============================================================================
+# ############################################################################
 # TASK 1: Linear Regression
-# ============================================================================
+# ############################################################################
 
 def linear_regression_single_country(days, cumulative_cases, country_name):
     """
@@ -345,9 +345,9 @@ def plot_linear_regression(data, results):
     return fig
 
 
-# ============================================================================
+# ############################################################################
 # TASK 2: Better Fitting Function (Polynomial/Sigmoid)
-# ============================================================================
+# ############################################################################
 
 def polynomial_fit(days, cumulative_cases, degree=3):
     """
@@ -447,9 +447,9 @@ def combined_fit_all_countries(data):
     return all_days, all_cumulative, results
 
 
-# ============================================================================
+# ############################################################################
 # TASK 3: Neural Network
-# ============================================================================
+# ############################################################################
 
 def create_nn_model(input_dim=1, hidden_layers=[64, 32], output_dim=1):
     """
@@ -606,9 +606,9 @@ def nn_predict_epidemic(data, test_size=0.2):
     return results
 
 
-# ============================================================================
+# ############################################################################
 # TASK 4: LSTM for Time Series
-# ============================================================================
+# ############################################################################
 
 def create_sequences(data, seq_length):
     """
@@ -758,9 +758,9 @@ def lstm_predict_all_countries(data, seq_length=10, test_size=0.2, epochs=100):
     return results
 
 
-# ============================================================================
+# ############################################################################
 # TASK 5: Comparison and Discussion
-# ============================================================================
+# ############################################################################
 
 def compare_all_methods(data, seir_params=None):
     """
@@ -884,9 +884,9 @@ def plot_comparison(data, comparison_df):
     return fig
 
 
-# ============================================================================
+# ############################################################################
 # VISUALIZATION UTILITIES
-# ============================================================================
+# ############################################################################
 
 def plot_training_history(history, title="Training History"):
     """
@@ -971,9 +971,9 @@ def create_comprehensive_figure(data, linear_results, nn_results, lstm_results=N
     return fig
 
 
-# ============================================================================
+# ############################################################################
 # MAIN EXECUTION HELPER
-# ============================================================================
+# ############################################################################
 
 def run_complete_analysis(data_path):
     """
